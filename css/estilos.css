@@ -4,12 +4,30 @@
 @font-face {
   font-family: "Texto";
   src: url("../fonts/ASENINE_.ttf"); }
+html {
+  scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
+  overflow-x: hidden; }
+
 * {
   margin: 0;
   padding: 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0px 20px; }
+
+body {
+  overflow-x: hidden; }
+  body::-webkit-scrollbar {
+    width: 10px;
+    background: #222831; }
+  body::-webkit-scrollbar-thumb {
+    background: #d65a31a1; }
 
 header {
   width: 100%;
@@ -45,18 +63,20 @@ header {
 nav {
   z-index: 1000;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  nav span i {
-    color: #eeeeee;
-    font-size: 40px;
-    padding: 10px; }
-    nav span i:hover {
-      cursor: pointer; }
+  nav span {
+    transition: 300MS; }
+    nav span i {
+      color: #eeeeee;
+      font-size: 40px;
+      padding: 10px; }
+      nav span i:hover {
+        cursor: pointer; }
   nav ul {
     width: 0;
     height: 95%;
@@ -65,7 +85,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    background-color: #222831c2;
+    background-color: #222831e1;
     overflow: hidden;
     transition: 300ms; }
     nav ul li img {
@@ -77,5 +97,518 @@ nav {
       font-size: 24px; }
       nav ul li a:hover {
         text-decoration: underline; }
+
+main .acercade {
+  width: 100%;
+  padding: 25px 0px 50px 0px;
+  background-color: #222831;
+  color: #eeeeee; }
+  main .acercade .container h2 {
+    font-size: 65px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: "Titulos"; }
+  main .acercade .container .info {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    main .acercade .container .info .text-info {
+      font-family: "Texto";
+      width: 50%;
+      text-align: justify;
+      font-size: 20px;
+      padding: 0px 25px; }
+      main .acercade .container .info .text-info ul {
+        padding-left: 15px;
+        list-style: disc; }
+    main .acercade .container .info img {
+      width: 35%;
+      border-radius: 5px;
+      box-shadow: 6px 6px 25px #00000085; }
+main .servicios {
+  width: 100%;
+  background: #eeeeee;
+  height: 100vh; }
+  main .servicios .container {
+    height: 100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    main .servicios .container h2 {
+      font-size: 65px;
+      font-family: "Titulos";
+      text-align: center; }
+    main .servicios .container .sliderServicios {
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      main .servicios .container .sliderServicios .sliderBig {
+        width: 90%;
+        background: #d65a31;
+        color: #eeeeee;
+        font-family: "Texto";
+        padding: 15px; }
+        main .servicios .container .sliderServicios .sliderBig h3 {
+          font-size: 35px; }
+        main .servicios .container .sliderServicios .sliderBig p {
+          font-size: 25px; }
+        main .servicios .container .sliderServicios .sliderBig .slick-arrow::before {
+          color: #393e46; }
+        main .servicios .container .sliderServicios .sliderBig .itemBig {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between; }
+          main .servicios .container .sliderServicios .sliderBig .itemBig .textItem {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; }
+          main .servicios .container .sliderServicios .sliderBig .itemBig .imgItem {
+            width: 200px;
+            height: 200px;
+            background-color: #222831; }
+            main .servicios .container .sliderServicios .sliderBig .itemBig .imgItem img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center; }
+      main .servicios .container .sliderServicios .sliderMed {
+        width: 70%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; }
+        main .servicios .container .sliderServicios .sliderMed .item {
+          background-color: #393e46;
+          margin: 10px 10px;
+          color: #eeeeee;
+          font-family: "Texto";
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around; }
+          main .servicios .container .sliderServicios .sliderMed .item h3 {
+            font-size: 25px;
+            margin: 10px auto; }
+          main .servicios .container .sliderServicios .sliderMed .item p {
+            padding: 10px;
+            font-size: 18px;
+            margin: 10px auto; }
+        main .servicios .container .sliderServicios .sliderMed .slick-center {
+          background-color: #d65a31;
+          transition: 300ms;
+          transform: scale(1.1); }
+        main .servicios .container .sliderServicios .sliderMed .slick-arrow::before {
+          color: #393e46; }
+
+.proyectos {
+  background-color: #393e46;
+  width: 100%;
+  padding: 25px 0px 50px 0px;
+  color: #eeeeee; }
+  .proyectos .container h2 {
+    font-size: 65px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: "Titulos"; }
+  .proyectos .container .proyects {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .proyectos .container .proyects .proyecto {
+      position: relative;
+      margin-bottom: 30px;
+      width: 30%;
+      cursor: pointer;
+      transition: 1s; }
+      .proyectos .container .proyects .proyecto img {
+        width: 100%; }
+      .proyectos .container .proyects .proyecto .text-pr {
+        font-family: "Texto";
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transform: scale(0);
+        transition: 0.6s;
+        font-size: 25px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        background-color: #d65a31;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        .proyectos .container .proyects .proyecto .text-pr h3 {
+          font-family: "Titulos";
+          font-size: 65px;
+          margin-bottom: 25px; }
+        .proyectos .container .proyects .proyecto .text-pr a {
+          text-decoration: none;
+          color: #eeeeee;
+          background-color: #393e46;
+          padding: 10px 40px; }
+        .proyectos .container .proyects .proyecto .text-pr p {
+          margin-bottom: 50px; }
+    .proyectos .container .proyects .proyecto:hover .text-pr {
+      opacity: 1;
+      transform: scale(1); }
+
+.clientes {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex; }
+  .clientes .contenedor {
+    width: 60%;
+    background: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center; }
+    .clientes .contenedor .cliente {
+      background: #d65a31;
+      padding: 20px 20px;
+      display: flex;
+      width: 35%;
+      height: 250px;
+      margin: 10px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      font-family: "Titulos"; }
+      .clientes .contenedor .cliente h3 {
+        color: #eeeeee;
+        display: inline-block;
+        justify-content: center;
+        font-size: 30px; }
+      .clientes .contenedor .cliente .button {
+        display: flex;
+        align-items: center;
+        font-family: "Texto";
+        font-size: 25px;
+        text-align: center;
+        text-decoration: none;
+        justify-content: center;
+        padding: 15px 50px;
+        margin: 10px 10px;
+        background: #393e46;
+        color: #eeeeee; }
+        .clientes .contenedor .cliente .button:hover {
+          cursor: pointer; }
+  .clientes .contenedor2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    background: #222831; }
+    .clientes .contenedor2 .client {
+      display: flex;
+      width: 90%;
+      height: 90%;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      align-items: center;
+      color: #eeeeee;
+      margin-top: 20px;
+      font-size: 40px;
+      font-family: "Titulos"; }
+      .clientes .contenedor2 .client .contImg {
+        background: #eeeeee36;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid #eee;
+        overflow: hidden; }
+        .clientes .contenedor2 .client .contImg img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; }
+      .clientes .contenedor2 .client p {
+        padding: 15px;
+        color: #eeeeee;
+        font-family: "Texto";
+        font-size: 24px; }
+
+.equipo {
+  background-color: #393e46;
+  width: 100%;
+  padding: 25px 0px 35px 0px;
+  color: #eeeeee; }
+  .equipo .container h2 {
+    font-size: 65px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: "Titulos"; }
+  .equipo .container .sliderEquipo .slick-prev::before, .equipo .container .sliderEquipo .slick-next::before {
+    display: none; }
+  .equipo .container .sliderEquipo .miembro {
+    background-color: #222831;
+    margin: 0px 10px;
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .equipo .container .sliderEquipo .miembro img {
+      width: 50%;
+      border-radius: 100%; }
+    .equipo .container .sliderEquipo .miembro h3 {
+      font-family: "Titulos";
+      font-size: 35px;
+      margin: 20px 0px; }
+    .equipo .container .sliderEquipo .miembro p {
+      font-family: "Texto";
+      font-size: 30px;
+      margin: 5px 0px; }
+    .equipo .container .sliderEquipo .miembro a {
+      margin-top: 10px;
+      text-decoration: none;
+      color: #eeeeee;
+      font-family: "Texto";
+      font-size: 30px;
+      padding: 10px 50px;
+      background-color: #d65a31; }
+
+.clientsResp {
+  background: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; }
+  .clientsResp h2 {
+    font-size: 45px;
+    color: #222831;
+    font-family: "Titulos";
+    margin: 20px auto; }
+  .clientsResp .container {
+    width: 85%;
+    display: flex;
+    flex-direction: column; }
+    .clientsResp .container .client {
+      width: 100%; }
+      .clientsResp .container .client .clientToggle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #eeeeee;
+        font-family: "Titulos";
+        font-size: 25px;
+        padding: 20px;
+        border-bottom: 0.5px solid #eeeeee31;
+        background: #222831;
+        cursor: pointer; }
+        .clientsResp .container .client .clientToggle span {
+          color: #d65a31; }
+      .clientsResp .container .client .clientInfo {
+        background: #393e46;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px; }
+        .clientsResp .container .client .clientInfo .contImg {
+          width: 20%; }
+          .clientsResp .container .client .clientInfo .contImg .img {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: #eeeeee36;
+            border: 3px solid #eee; }
+            .clientsResp .container .client .clientInfo .contImg .img img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              object-position: center; }
+        .clientsResp .container .client .clientInfo p {
+          width: 80%;
+          color: #eeeeee;
+          font-family: "Texto";
+          font-size: 18px;
+          padding: 20px;
+          text-align: justify; }
+
+footer {
+  background-color: #222831;
+  color: #eeeeee;
+  display: flex;
+  padding: 25px 10px;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  font-family: "Texto"; }
+  footer h3 {
+    font-size: 65px;
+    font-family: "Titulos";
+    margin-bottom: 35px; }
+  footer .contacto {
+    margin-bottom: 15px;
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    footer .contacto p {
+      font-size: 25px; }
+  footer .redes {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    margin-bottom: 15px; }
+    footer .redes a {
+      text-decoration: none;
+      color: #eeeeee;
+      font-size: 30px;
+      opacity: 0.5; }
+    footer .redes a:hover {
+      opacity: 1; }
+  footer .copy {
+    display: flex;
+    font-size: 25px;
+    align-items: center; }
+    footer .copy span {
+      font-weight: bold;
+      font-size: 30px;
+      margin-right: 30px; }
+
+@media screen and (max-width: 1024px) {
+  main .servicios {
+    height: auto; }
+    main .servicios .container .sliderServicios .sliderMed {
+      width: 80%; } }
+@media screen and (max-width: 850px) {
+  header div h1 {
+    font-size: 120px; }
+  header div h2 {
+    font-size: 25px; }
+
+  main .acercade .container .info .text-info {
+    width: 100%;
+    padding: 0px; }
+  main .acercade .container .info img {
+    display: none; }
+  main .servicios .container .sliderServicios .sliderBig {
+    width: 100%; }
+    main .servicios .container .sliderServicios .sliderBig .itemBig {
+      flex-direction: column;
+      padding: 5px; }
+      main .servicios .container .sliderServicios .sliderBig .itemBig .textItem {
+        text-align: center; }
+      main .servicios .container .sliderServicios .sliderBig .itemBig .imgItem {
+        margin-top: 20px; }
+  main .servicios .container .sliderServicios .sliderMed {
+    display: none; }
+
+  .proyectos .container .proyects {
+    padding: 20px 0px; }
+    .proyectos .container .proyects .proyecto {
+      width: 45%; }
+
+  .equipo {
+    padding: 25px 0px; }
+    .equipo .container h2 {
+      font-size: 65px;
+      margin-bottom: 25px;
+      text-align: center;
+      font-family: "Titulos"; }
+    .equipo .container .sliderEquipo .miembro {
+      margin: 0px 10px;
+      padding: 15px 10px; }
+      .equipo .container .sliderEquipo .miembro img {
+        width: 50%;
+        border-radius: 100%; }
+      .equipo .container .sliderEquipo .miembro h3 {
+        font-size: 35px;
+        margin: 20px 0px; }
+      .equipo .container .sliderEquipo .miembro p {
+        font-family: "Texto"; }
+      .equipo .container .sliderEquipo .miembro a {
+        font-size: 30px;
+        padding: 10px 30px; }
+
+  footer .contacto {
+    width: 100%; }
+    footer .contacto p {
+      font-size: 25px; }
+  footer .redes {
+    width: 50%; }
+    footer .redes a {
+      opacity: 0.8; }
+  footer .copy {
+    font-size: 22px; }
+    footer .copy span {
+      font-weight: bold;
+      font-size: 25px;
+      margin-right: 30px; } }
+@media screen and (max-width: 400px) {
+  header div {
+    margin-left: 50px; }
+    header div h1 {
+      font-size: 80px; }
+    header div h2 {
+      font-size: 20px; }
+
+  main .acercade .container h2 {
+    font-size: 45px; }
+  main .servicios .container {
+    padding: 3px;
+    width: 95%; }
+    main .servicios .container h2 {
+      font-size: 45px; }
+    main .servicios .container .sliderServicios .sliderBig .itemBig .textItem {
+      width: 100%; }
+      main .servicios .container .sliderServicios .sliderBig .itemBig .textItem p {
+        font-size: 18px; }
+
+  .proyectos .container h2 {
+    font-size: 45px; }
+  .proyectos .container .proyects .proyecto {
+    width: 70%; }
+    .proyectos .container .proyects .proyecto .text-pr {
+      font-size: 18px; }
+      .proyectos .container .proyects .proyecto .text-pr h3 {
+        font-size: 25px;
+        margin-bottom: 15px; }
+      .proyectos .container .proyects .proyecto .text-pr a {
+        padding: 10px 30px; }
+      .proyectos .container .proyects .proyecto .text-pr p {
+        margin-bottom: 25px; }
+
+  .equipo {
+    padding: 25px 0px; }
+    .equipo .container h2 {
+      font-size: 45px; }
+
+  footer h3 {
+    font-size: 45px;
+    margin-bottom: 25px; }
+  footer .contacto p {
+    font-size: 20px; }
+    footer .contacto p .bx-at {
+      margin-top: 10px; }
+  footer .redes {
+    width: 70%; }
+    footer .redes a {
+      font-size: 25px;
+      opacity: 0.8; }
+  footer .copy {
+    font-size: 20px; }
+    footer .copy span {
+      font-weight: bold;
+      font-size: 22px;
+      margin-right: 10px; } }
 
 /*# sourceMappingURL=estilos.css.map */

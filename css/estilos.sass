@@ -12,13 +12,32 @@ $Cuarto: #eeeeee
 
 $fonttit: "Titulos"
 $fonttext: "Texto"
-
+$sizeTitle: 65px
+$sizeTitleMov: 45px
+html
+    scroll-behavior: smooth
+    -o-scroll-behavior: smooth
+    overflow-x: hidden
 *
     margin: 0
     padding: 0
     -moz-box-sizing: border-box
     -webkit-box-sizing: border-box
     box-sizing: border-box
+// centrarcontenido
+.container
+    max-width: 1024px
+    margin: auto
+    padding: 0px 20px 
+// header
+
+body
+    overflow-x: hidden
+    &::-webkit-scrollbar
+        width: 10px
+        background: $Primero
+    &::-webkit-scrollbar-thumb
+        background: #d65a31a1
 
 header
     width: 100%
@@ -50,17 +69,18 @@ header
         h2
             font-size: 32px
             margin-left: 20px
-            
+// menu de navegacion
 nav
     z-index: 1000
     height: 100vh
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     display: flex
     flex-direction: column
     justify-content: space-between
-    span 
+    span
+        transition: 300MS
         i
             color: $Cuarto
             font-size: 40px
@@ -75,7 +95,7 @@ nav
         justify-content: space-around
         align-items: center
         list-style: none
-        background-color: #222831c2      
+        background-color: #222831e1      
         overflow: hidden
         transition: 300ms
         li
@@ -88,4 +108,566 @@ nav
                 font-size: 24px
                 &:hover
                     text-decoration: underline
+// acerca de
+main
+    .acercade
+        width: 100%
+        padding: 25px 0px 50px 0px
+        background-color: $Primero
+        color: #eeeeee
+        .container
+            h2
+                font-size: $sizeTitle
+                margin-bottom: 25px
+                text-align: center
+                font-family: $fonttit
+            .info
+                display: flex
+                width: 100%
+                flex-wrap: wrap
+                justify-content: space-around
+                .text-info
+                    font-family: $fonttext
+                    width: 50%
+                    text-align: justify
+                    font-size: 20px
+                    padding: 0px 25px
+                    ul
+                        padding-left: 15px
+                        list-style: disc
+                    
+                img
+                    width: 35%
+                    border-radius: 5px
+                    box-shadow: 6px 6px 25px #00000085
+    .servicios
+        width: 100%
+        background: $Cuarto
+        height: 100vh
+        .container
+            height: 100%
+            padding: 20px 20px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            h2
+                font-size: $sizeTitle
+                font-family: $fonttit
+                text-align: center
+            .sliderServicios
+                height: 90%
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                align-items: center
+                .sliderBig
+                    width: 90%
+                    background: $Tercero
+                    color: #eeeeee
+                    font-family: 'Texto'
+                    padding: 15px
+                    h3
+                        font-size: 35px
+                    p
+                        font-size: 25px
+                    .slick-arrow
+                        &::before
+                            color: $Segundo
+                    .itemBig
+                        display: flex
+                        flex-direction: row
+                        align-items: center
+                        justify-content: space-between
+                        .textItem
+                            width: 70%
+                            display: flex
+                            flex-direction: column
+                            justify-content: space-around
+                        .imgItem
+                            width: 200px
+                            height: 200px
+                            background-color: $Primero
+                            img
+                                width: 100%
+                                height: 100%
+                                object-fit: cover
+                                object-position: center
+                .sliderMed
+                    width: 70%
+                    height: 200px
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-around
+                    align-items: center
+                    .item
+                        background-color: $Segundo
+                        margin: 10px 10px
+                        color: $Cuarto
+                        font-family: 'Texto'
+                        text-align: center
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-around
+                        h3
+                            font-size: 25px
+                            margin: 10px auto
+                        p
+                            padding: 10px
+                            font-size: 18px
+                            margin: 10px auto
 
+                    .slick-center
+                        background-color: $Tercero
+                        transition: 300ms
+                        transform: scale(1.1)
+                    .slick-arrow
+                        &::before
+                            color: $Segundo
+
+// proyectos
+.proyectos
+    background-color: $Segundo
+    width: 100%
+    padding: 25px 0px 50px 0px
+    color: #eeeeee
+    .container
+        h2
+            font-size: $sizeTitle
+            margin-bottom: 25px
+            text-align: center
+            font-family: $fonttit
+        .proyects
+            width: 100%
+            padding: 20px
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-around
+            .proyecto
+                position: relative
+                margin-bottom: 30px
+                width: 30%
+                cursor: pointer
+                transition: 1s
+                img
+                    width: 100%
+                .text-pr
+                    font-family: $fonttext
+                    width: 100%
+                    height: 100%
+                    opacity: 0
+                    transform: scale(0.0)
+                    transition: .6s
+                    font-size: 25px
+                    display: flex
+                    text-align: center
+                    align-items: center  
+                    background-color: $Tercero
+                    position: absolute
+                    top: 0
+                    left: 0
+                    h3
+                        font-family: $fonttit
+                        font-size: $sizeTitle
+                        margin-bottom: 25px
+                    a
+                        text-decoration: none
+                        color: $Cuarto
+                        background-color: $Segundo
+                        padding: 10px 40px
+                    p
+                        margin-bottom: 50px
+            .proyecto:hover
+                .text-pr
+                    opacity: 1
+                    transform: scale(1.0)
+
+
+.clientes
+    width: 100%
+    height: auto
+    min-height: 100vh
+    display: flex
+    .contenedor
+        width: 60%
+        background: #eeeeee
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        align-content: center
+        .cliente
+            background: #d65a31
+            padding: 20px 20px
+            display: flex 
+            width: 35%
+            height: 250px
+            margin: 10px
+            flex-wrap: wrap
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            font-family: $fonttit
+            h3  
+                color: #eeeeee
+                display: inline-block
+                justify-content: center
+                font-size: 30px
+            .button
+                display: flex
+                align-items: center
+                font-family: 'Texto'
+                font-size: 25px
+                text-align: center
+                text-decoration: none
+                justify-content: center
+                padding: 15px 50px
+                margin: 10px 10px
+                background: #393e46
+                color: #eeeeee
+                &:hover
+                    cursor: pointer
+    .contenedor2
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 40%
+        background: #222831
+        .client
+            display: flex
+            width: 90%
+            height: 90%
+            flex-direction: column
+            justify-content: space-around
+            text-align: center
+            align-items: center
+            h3
+            color: #eeeeee
+            margin-top: 20px
+            font-size: 40px
+            font-family: $fonttit
+            .contImg
+                background: #eeeeee36
+                width: 150px
+                height: 150px
+                border-radius: 50%
+                border: 5px solid #eee
+                overflow: hidden
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+            p
+                padding: 15px
+                color: $Cuarto
+                font-family: $fonttext
+                font-size: 24px
+// nuestro equipo
+.equipo
+    background-color: $Segundo
+    width: 100%
+    padding: 25px 0px 35px 0px
+    color: #eeeeee
+    .container
+        h2
+            font-size: $sizeTitle
+            margin-bottom: 25px
+            text-align: center
+            font-family: $fonttit
+        .sliderEquipo
+            .slick-prev::before, .slick-next::before
+                display: none
+            .miembro
+                background-color: $Primero
+                margin: 0px 10px
+                display: flex
+                width: 100%
+                padding: 50px
+                flex-direction: column
+                align-items: center
+                text-align: center
+                img
+                    width: 50%
+                    border-radius: 100%
+                h3
+                    font-family: $fonttit
+                    font-size: 35px
+                    margin: 20px 0px
+                p
+                    font-family: $fonttext
+                    font-size: 30px
+                    margin: 5px 0px
+                a
+                    margin-top: 10px
+                    text-decoration: none
+                    color: $Cuarto
+                    font-family: $fonttext
+                    font-size: 30px
+                    padding: 10px 50px
+                    background-color: $Tercero
+
+.clientsResp
+    background: $Cuarto
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 20px
+    h2
+        font-size: $sizeTitleMov
+        color: $Primero
+        font-family: $fonttit
+        margin: 20px auto
+    .container
+        width: 85%
+        display: flex
+        flex-direction: column
+        .client
+            width: 100%
+            .clientToggle
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                color: $Cuarto
+                font-family: $fonttit
+                font-size: 25px
+                padding: 20px 
+                border-bottom: 0.5px solid #eeeeee31
+                background: $Primero
+                &:hover
+                cursor: pointer
+                span
+                    color: $Tercero
+            .clientInfo
+                background: $Segundo
+                width: 100%
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                align-items: center
+                padding: 15px
+                .contImg
+                    width: 20%
+                    .img
+                        width: 100px
+                        height: 100px
+                        margin: 0 auto
+                        border-radius: 50%
+                        background: #eeeeee36
+                        border: 3px solid #eee
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: contain
+                            object-position: center
+                p
+                    width: 80%
+                    color: $Cuarto
+                    font-family: $fonttext
+                    font-size: 18px
+                    padding: 20px
+                    text-align: justify
+
+
+
+
+// footer
+footer
+    background-color: $Primero
+    color: $Cuarto
+    display: flex
+    padding: 25px 10px
+    flex-direction: column
+    width: 100%
+    align-items: center
+    text-align: center
+    font-family: $fonttext
+    h3
+        font-size: $sizeTitle
+        font-family: $fonttit
+        margin-bottom: 35px
+    .contacto
+        margin-bottom: 15px
+        display: flex
+        width: 50%
+        flex-wrap: wrap
+        justify-content: space-around
+        p
+            font-size: 25px
+    .redes
+        display: flex
+        width: 30%
+        justify-content: space-around
+        margin-bottom: 15px
+        a
+            text-decoration: none
+            color: $Cuarto
+            font-size: 30px
+            opacity: .5
+        a:hover
+            opacity: 1
+
+    .copy
+        display: flex
+        font-size: 25px
+        align-items: center
+        span
+            font-weight: bold
+            font-size: 30px
+            margin-right: 30px
+
+
+@media screen and (max-width: 1024px)
+    main
+        .servicios
+            height: auto
+            .container 
+                .sliderServicios
+                    .sliderBig
+                    .sliderMed
+                        width: 80%
+
+@media screen and (max-width:850px) 
+    header
+        div
+            h1
+                font-size: 120px
+            h2
+                font-size: 25px
+    main
+        .acercade
+            .container
+                .info
+                    .text-info
+                        width: 100%
+                        padding: 0px
+                    img
+                        display: none
+        .servicios
+            .container
+                .sliderServicios
+                    .sliderBig
+                        width: 100%
+                        .itemBig
+                            flex-direction: column
+                            padding: 5px
+                            .textItem
+                                text-align: center
+                            .imgItem
+                                margin-top: 20px
+                    .sliderMed
+                        display: none
+
+    .proyectos
+            .container
+                .proyects
+                    padding: 20px 0px
+                    .proyecto
+                        width: 45%
+    .equipo
+        padding: 25px 0px
+        .container
+            h2
+                font-size: $sizeTitle
+                margin-bottom: 25px
+                text-align: center
+                font-family: $fonttit
+            .sliderEquipo
+                .miembro
+                    margin: 0px 10px
+                    padding: 15px 10px
+                    img
+                        width: 50%
+                        border-radius: 100%
+                    h3
+                        font-size: 35px
+                        margin: 20px 0px
+                    p
+                        font-family: $fonttext
+                    a
+                        font-size: 30px
+                        padding: 10px 30px
+    footer
+        .contacto
+            width: 100%
+            p
+                font-size: 25px
+        .redes
+            width: 50%
+            a
+                opacity: .8
+        .copy
+            font-size: 22px
+            span
+                font-weight: bold
+                font-size: 25px
+                margin-right: 30px
+
+
+
+@media screen and (max-width:400px) 
+    header
+        div
+            margin-left: 50px
+            h1
+                font-size: 80px 
+            h2
+                font-size: 20px
+    main
+        .acercade
+            .container
+                h2
+                    font-size: $sizeTitleMov
+        .servicios
+            .container
+                padding: 3px
+                width: 95%
+                h2
+                    font-size: $sizeTitleMov
+                .sliderServicios
+                    .sliderBig
+                        .itemBig
+                            .textItem
+                                width: 100%
+                                p
+                                    font-size: 18px
+
+    .proyectos
+        .container
+            h2
+                font-size: $sizeTitleMov
+            .proyects
+                .proyecto
+                    width: 70%
+                    .text-pr
+                        font-size: 18px
+                        h3
+                            font-size: 25px
+                            margin-bottom: 15px
+                        a
+                            padding: 10px 30px
+                        p
+                            margin-bottom: 25px
+    .equipo
+        padding: 25px 0px
+        .container
+            h2
+                font-size: $sizeTitleMov
+    footer
+        h3
+            font-size: $sizeTitleMov
+            margin-bottom: 25px
+        .contacto
+            p
+                font-size: 20px
+                .bx-at
+                    margin-top: 10px
+        .redes
+            width: 70%
+            a
+                font-size: 25px
+                opacity: .8
+        .copy
+            font-size: 20px
+            span
+                font-weight: bold
+                font-size: 22px
+                margin-right: 10px
