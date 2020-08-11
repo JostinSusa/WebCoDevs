@@ -19,6 +19,22 @@ $(document).ready(function(){
             });
             count = 0;
         }
-    });
+        });
+        $('#menu a').on('click', function(){
+            $('#contToggle').css({
+                background: 'transparent'
+            });
+            $('#menu').css({
+                width: '0'
+            });
+            count = 0;
+        });
     }());
-});
+
+    (function(){
+        $('.clientToggle').on('click', function(){
+            $(this).siblings('.clientInfo').slideToggle();
+            
+        });
+    }());
+}); 
