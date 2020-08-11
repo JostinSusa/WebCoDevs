@@ -108,6 +108,8 @@ nav
                 font-size: 24px
                 &:hover
                     text-decoration: underline
+        .clientsRespLink
+            display: none
 // acerca de
 main
     .acercade
@@ -532,6 +534,13 @@ footer
                 font-size: 120px
             h2
                 font-size: 25px
+    nav
+        ul
+            .clientsLink
+                display: none
+            .clientsRespLink
+                display: block
+
     main
         .acercade
             .container
@@ -608,11 +617,6 @@ footer
 @media screen and (max-width:650px)
     .clientsResp
         .container
-            width: 100%
-
-@media screen and (max-width:550px)
-    .clientsResp
-        .container
             .client
                 .clientInfo
                     flex-direction: column
@@ -624,6 +628,8 @@ footer
                     p
                         width: 95%
                         text-align: center
+
+    
 @media screen and (max-width:400px) 
     header
         div
