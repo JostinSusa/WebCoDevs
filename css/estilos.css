@@ -443,6 +443,120 @@ main .servicios {
           padding: 20px;
           text-align: justify; }
 
+.contact {
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px 0;
+  font-family: "Titulos"; }
+  .contact .contTitle {
+    margin: 20px; }
+    .contact .contTitle h2 {
+      font-size: 65px;
+      color: #222831;
+      font-weight: 300; }
+    .contact .contTitle hr {
+      width: 100px;
+      height: 5px;
+      margin-left: 4px;
+      background-color: #222831;
+      border: none; }
+  .contact .divCont {
+    width: 100%; }
+    .contact .divCont form {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%; }
+      .contact .divCont form .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column; }
+        .contact .divCont form .left .inputGroup {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          width: 80%;
+          padding: 20px; }
+          .contact .divCont form .left .inputGroup input {
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #00000020;
+            color: #222831;
+            font-size: 18px;
+            font-weight: 300; }
+            .contact .divCont form .left .inputGroup input::-webkit-input-placeholder {
+              color: #222831;
+              font-weight: 200;
+              font-size: 18px; }
+          .contact .divCont form .left .inputGroup label {
+            color: #00000080;
+            font-weight: 400; }
+        .contact .divCont form .left .infoCont {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          width: 100%; }
+          .contact .divCont form .left .infoCont p {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            padding: 10px 15px; }
+            .contact .divCont form .left .infoCont p i {
+              padding-right: 10px; }
+      .contact .divCont form .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        border-left: 2px solid #00000020; }
+        .contact .divCont form .right .inputGroup {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          justify-content: space-between;
+          width: 100%; }
+          .contact .divCont form .right .inputGroup textarea {
+            padding: 15px;
+            width: 100%;
+            border: none;
+            color: #222831;
+            font-size: 18px;
+            font-weight: 400;
+            font-family: "Titulos";
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            height: 300px;
+            max-height: 300px;
+            min-height: 300px; }
+            .contact .divCont form .right .inputGroup textarea::-webkit-input-placeholder {
+              color: #222831;
+              font-weight: 600;
+              font-size: 18px; }
+            .contact .divCont form .right .inputGroup textarea::-moz-input-placeholder {
+              color: #222831;
+              font-weight: 200;
+              font-size: 18px; }
+          .contact .divCont form .right .inputGroup label {
+            color: #00000080;
+            margin-left: 15px; }
+        .contact .divCont form .right button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Titulos";
+          font-weight: 400;
+          font-size: 20px;
+          height: 50px;
+          background-color: #222831;
+          border: none;
+          color: #eee;
+          width: 100%; }
+          .contact .divCont form .right button:hover {
+            cursor: pointer; }
+
 footer {
   background-color: #222831;
   color: #eeeeee;
