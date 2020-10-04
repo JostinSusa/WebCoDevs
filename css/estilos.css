@@ -664,7 +664,10 @@ footer {
     display: none; }
 
   .clientsResp {
-    display: flex; }
+    display: flex;
+    padding: 20px 0; }
+    .clientsResp .container {
+      width: 100%; }
 
   footer .contacto {
     width: 100%; }
@@ -690,7 +693,18 @@ footer {
         margin: 0 auto; }
     .clientsResp .container .client .clientInfo p {
       width: 95%;
-      text-align: center; } }
+      text-align: center; }
+
+  .contact .divCont form .left {
+    width: 100%;
+    align-items: center; }
+    .contact .divCont form .left .infoCont {
+      display: none; }
+  .contact .divCont form .right {
+    width: 100%;
+    border: 2px solid #00000020;
+    padding-top: 15px;
+    margin-top: 20px; } }
 @media screen and (max-width: 400px) {
   header div {
     margin-left: 50px; }
