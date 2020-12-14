@@ -17,7 +17,8 @@ $('.sliderBig').slick({
       {
         breakpoint: 480,
         settings: {
-          arrows: false
+          arrows: false,
+          dots: true
         }
       }
     ]

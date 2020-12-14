@@ -14,7 +14,7 @@
     <header id="inicio">
         <div class="headTitle">
             <h1>CoDevs</h1>
-            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h2><span class="typed"></span></h2>
         </div>
     </header>
     <nav>
@@ -27,7 +27,7 @@
             <li class="clientsLink"><a href="#clientes">Clientes</a></li>
             <li class="clientsRespLink"><a href="#clientsResp">Clientes</a></li>
             <li><a href="#equipo">Equipo</a></li>
-            <li><a href="#footer">Contacto</a></li>
+            <li><a href="#contact">Contacto</a></li>
             <li><img src="img/Logo Devs_borde.png" alt=""></li>
         </ul>
     </nav>
@@ -173,33 +173,59 @@
         <div class="contenedor">
             <div class="cliente">
                 <h3>Cliente</h3>
-                <a href="" class="button">Ver</a>
+                <a href="#" class="buttonCli" id="1">Ver</a>
             </div>
             <div class="cliente">
                 <h3>Cliente</h3>
-                <a href="" class="button">Ver</a>
+                <a href="#" class="buttonCli" id="2">Ver</a>
             </div>
             <div class="cliente">
                 <h3>Cliente</h3>
-                <a href="" class="button">Ver</a>
+                <a href="#" class="buttonCli" id="3">Ver</a>
             </div>
             <div class="cliente">
                 <h3>Cliente</h3>
-                <a href="" class="button">Ver</a>
+                <a href="#" class="buttonCli" id="4">Ver</a>
             </div>
 
         </div>
         <div class="contenedor2">
-            <div class="client">
+            <div class="client clientActive" id="client_1">
                 <h3>Nuestros Clientes</h3>
-                <div class="contImg">
+                <div class="contImg" ">
                     <img src="img/logoOSC.png" alt="">
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat illum quasi, commodi voluptates tenetur nisi aliquam ullam! Nemo atque voluptatibus hic eaque nostrum ratione libero magnam laborum modi. Asperiores vitae veritatis fugiat animi officiis assumenda magnam consequuntur, voluptatibus a incidunt, quidem, exercitationem voluptates culpa ipsa hic optio corporis perspiciatis.
                 </p>
             </div>
-
+            <div class="client" id="client_2">
+                <h3>Cliente 2</h3>
+                <div class="contImg" >
+                    <img src="img/logoOSC.png" alt="">
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat illum quasi, commodi voluptates tenetur nisi aliquam ullam! Nemo atque voluptatibus hic eaque nostrum ratione libero magnam laborum modi. Asperiores vitae veritatis fugiat animi officiis assumenda magnam consequuntur, voluptatibus a incidunt, quidem, exercitationem voluptates culpa ipsa hic optio corporis perspiciatis.
+                </p>
+            </div>
+            <div class="client" id="client_3">
+                <h3>Cliente 3</h3>
+                <div class="contImg" >
+                    <img src="img/logoOSC.png" alt="">
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat illum quasi, commodi voluptates tenetur nisi aliquam ullam! Nemo atque voluptatibus hic eaque nostrum ratione libero magnam laborum modi. Asperiores vitae veritatis fugiat animi officiis assumenda magnam consequuntur, voluptatibus a incidunt, quidem, exercitationem voluptates culpa ipsa hic optio corporis perspiciatis.
+                </p>
+            </div>
+            <div class="client" id="client_4">
+                <h3>Cliente 4</h3>
+                <div class="contImg" >
+                    <img src="img/logoOSC.png" alt="">
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat illum quasi, commodi voluptates tenetur nisi aliquam ullam! Nemo atque voluptatibus hic eaque nostrum ratione libero magnam laborum modi. Asperiores vitae veritatis fugiat animi officiis assumenda magnam consequuntur, voluptatibus a incidunt, quidem, exercitationem voluptates culpa ipsa hic optio corporis perspiciatis.
+                </p>
+            </div>
         </div>
     </section>
     <section class="clientsResp" id="clientsResp">
@@ -296,7 +322,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contTitle">
             <h2>Escribenos</h2>
             <hr>
@@ -352,6 +378,7 @@
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="js/main.js"></script>
     <script src="js/slick.js"></script>
 </body>
